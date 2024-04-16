@@ -1,1 +1,32 @@
-<p>input works!</p>
+<mat-card>
+  <mat-card-title>{{ title }}</mat-card-title>
+  <form [formGroup]="form" (ngSubmit)="send(form.value)">
+    <p>
+      <mat-form-field appearance="outline" color="accent">
+        <mat-label>Cost of service</mat-label>
+        <input matInput type="number" formControlName="costOfService">
+        <mat-error *ngIf="!form.get('costOfService')?.valid && form.get('costOfService')?.touched">
+          Cost of service is required and should be a number
+        </mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-label>Service quality(tip percent)</mat-label>
+      <mat-radio-group formControlName="tipPercent" color="primary"><br>
+        <mat-radio-button value="0.15">Okay - 15%</mat-radio-button><br>
+        <mat-radio-button value="0.18">Good - 18%</mat-radio-button><br>
+        <mat-radio-button value="0.20">Excellent - 20%</mat-radio-button><br>
+        <mat-error *ngIf="!form.get('tipPercent')?.valid && form.get('tipPercent')?.touched">
+          Choose an option for service quality
+        </mat-error>
+      </mat-radio-group>
+    </p>
+    <p>
+      <mat-checkbox value="true"
+                    formControlName="roundUp">Round up tip</mat-checkbox><br/>
+    </p>
+    <p>
+      <button mat-flat-button color="primary" type="submit" [disabled]="!form.valid">Send</button>
+    </p>
+  </form>
+</mat-card>
