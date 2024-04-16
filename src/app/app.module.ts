@@ -13,6 +13,7 @@ import {MatInput} from "@angular/material/input";
 import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
 import {MatCheckbox} from "@angular/material/checkbox";
 import {MatButton} from "@angular/material/button";
+import {MatToolbar} from "@angular/material/toolbar";
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {MatButton} from "@angular/material/button";
     MatRadioButton,
     MatError,
     MatCheckbox,
-    MatButton
+    MatButton,
+    MatToolbar
   ],
   providers: [
     provideAnimationsAsync()

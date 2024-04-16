@@ -1,0 +1,19 @@
+mat-card{
+  width: max-content ;
+  padding: 20px;
+  background-color: #000000;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.47);
+}
+
+mat-card-title{
+  color: white;
+  padding: 10px;
+}
+
+mat-label{
+  color: white
+}
+
+mat-form-field{
+  width: 340px;
+}
