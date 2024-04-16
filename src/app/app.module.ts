@@ -12,7 +12,7 @@ import {MatError, MatFormField, MatLabel} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
 import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
 import {MatCheckbox} from "@angular/material/checkbox";
-import {MatButton} from "@angular/material/button";
+import {MatAnchor, MatButton} from "@angular/material/button";
 import {MatToolbar} from "@angular/material/toolbar";
 
 @NgModule({
@@ -35,7 +35,8 @@ import {MatToolbar} from "@angular/material/toolbar";
     MatError,
     MatCheckbox,
     MatButton,
-    MatToolbar
+    MatToolbar,
+    MatAnchor
   ],
   providers: [
     provideAnimationsAsync()

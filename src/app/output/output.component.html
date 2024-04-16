@@ -1,1 +1,22 @@
-<p>output works!</p>
+<mat-card>
+  <mat-card-title>{{ title }}</mat-card-title>
+  <p>
+    <label class="output-label">Cost of service:</label>
+    <span class="output-value">{{tip.costOfService | currency: 'CAD'}}</span>
+  </p>
+  <p>
+    <label class="output-label">Tip Percent:</label>
+    <span class="output-value">{{tip.tipPercent | percent}}</span>
+  </p>
+  <p>
+    <label class="output-label">Round up tip:</label>
+    <span class="output-value">{{tip.roundUp?"yes":"no"}}</span>
+  </p>
+  <p>
+    <label class="output-label">Tip amount:</label>
+    <span class="output-value">{{tip.tipAmount | currency: 'CAD'}}</span>
+  </p>
+  <p>
+    <a mat-raised-button routerLink="input" color="accent">Back to Input</a>
+  </p>
+</mat-card>
